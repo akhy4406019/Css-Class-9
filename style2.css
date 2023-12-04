@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+}
+.box a{
+    width: 200px;
+    height: 40px;
+    color: rgb(158, 4, 158);
+    padding: 10px 15px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    font-size: 22px;
+}
+.box a::after{
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 50%;
+    border-top: 2px solid purple;
+    border-left: 2px solid purple;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+.box a::before{
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 50%;
+    border-bottom: 2px solid purple;
+    border-right: 2px solid purple;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
+}
+.box a:hover::after{
+    width: 97%;
+    height: 95%;
+}
+.box a:hover::before{
+    width: 97%;
+    height: 95%;
+}
