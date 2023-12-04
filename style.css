@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+}
+.box a{
+    width: 200px;
+    height: 40px;
+    color: red;
+    border: 1PX solid red;
+    padding: 10px 15px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+.box a::before{
+    position: absolute;
+    content: "";
+    height:100%;
+    width:0%;
+    left: 100%;
+   background: plum;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   transition: 0.3s;
+}
+.box a:hover::before{
+    width: 100%;
+}
